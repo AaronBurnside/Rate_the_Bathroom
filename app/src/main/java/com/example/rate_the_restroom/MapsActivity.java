@@ -15,7 +15,13 @@ import com.example.rate_the_restroom.databinding.ActivityMapsBinding;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+
+
     private ActivityMapsBinding binding;
+    static final LatLng CP1 = new LatLng(43.811452, -111.786787);
+    static final LatLng CP2 = new LatLng(43.821926, -111.786798);
+    static final LatLng CP3 = new LatLng(43.821791, -111.778140);
+    static final LatLng CP4 = new LatLng(43.811542, -111.778128);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +50,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        //LatLng sydney = new LatLng(-34, 151);
+        //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CP1, 15));
+        googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        googleMap.getUiSettings().setZoomGesturesEnabled(false);
+
     }
 }
