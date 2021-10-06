@@ -38,7 +38,7 @@ public class Select_Floor extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_select_floor);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-        ImageButton button = (ImageButton) findViewById(R.id.F0male);
+        //ImageButton button = (ImageButton) findViewById(R.id.F0male);
 
     }
     public void Open_F0_M_Bathroom(View view) {
