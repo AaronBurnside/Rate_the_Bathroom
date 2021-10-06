@@ -12,16 +12,24 @@
     android:foregroundTintMode="screen"
     android:paddingTop="?attr/actionBarSize">
 
+    <ImageButton
+        android:id="@+id/f0female"
+        android:layout_width="80dp"
+        android:layout_height="74dp"
+        android:background="#4CAF50"
+        android:onClick="Open_F0_F_Bathroom"
+        app:layout_constraintEnd_toStartOf="@+id/F1male"
+        app:layout_constraintTop_toBottomOf="@+id/F0female"
+        app:srcCompat="@mipmap/female_sign"
+        tools:srcCompat="@mipmap/female_sign" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="391dp"
         android:layout_height="72dp"
-        android:layout_marginEnd="20dp"
         android:background="#3F51B5"
         android:text="Seconed Floor"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -29,16 +37,13 @@
         android:id="@+id/textView2"
         android:layout_width="391dp"
         android:layout_height="72dp"
-        android:layout_marginEnd="20dp"
         android:background="#3F51B5"
         android:text="Bottom Floor"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintVertical_bias="0.965" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -59,24 +64,22 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:navGraph="@navigation/mobile_navigation" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="391dp"
         android:layout_height="72dp"
-        android:layout_marginEnd="20dp"
         android:background="#3F51B5"
         android:text="1st Floor"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/F0male" />
 
@@ -84,9 +87,45 @@
         android:id="@+id/F0male"
         android:layout_width="80dp"
         android:layout_height="74dp"
+        android:background="#4CAF50"
         android:onClick="Open_F0_M_Bathroom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/nav_host_fragment_activity_select_floor"
         app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageButton
+        android:id="@+id/F1male"
+        android:layout_width="80dp"
+        android:layout_height="74dp"
+        android:background="#4CAF50"
+        android:onClick="Open_F1_M_Bathroom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/F0male"
+        app:srcCompat="@mipmap/ic_launcher_round"
+        tools:srcCompat="@mipmap/ic_launcher_round" />
+
+
+    <ImageButton
+        android:id="@+id/F0female"
+        android:layout_width="80dp"
+        android:layout_height="74dp"
+        android:background="#4CAF50"
+        android:onClick="Open_F0_F_Bathroom"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/F0male"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/female_sign"
+        tools:srcCompat="@mipmap/female_sign" />
+
+    <ImageButton
+        android:id="@+id/F1female"
+        android:layout_width="80dp"
+        android:layout_height="74dp"
+        android:background="#4CAF50"
+        android:onClick="Open_F1_F_Bathroom"
+        app:layout_constraintEnd_toStartOf="@+id/F1male"
+        app:layout_constraintTop_toBottomOf="@+id/F0female"
+        app:srcCompat="@mipmap/female_sign"
+        tools:srcCompat="@mipmap/female_sign" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

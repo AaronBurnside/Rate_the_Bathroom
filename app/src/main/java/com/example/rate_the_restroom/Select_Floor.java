@@ -45,6 +45,17 @@ public class Select_Floor extends AppCompatActivity {
         Intent intent = new Intent(this, MapsActivity.class);;
         startActivity(intent);
     }
-
+    public void Open_F0_F_Bathroom(View view) {
+        Intent intent = new Intent(this, MapsActivity.class);;
+        startActivity(intent);
+    }
+    public void Open_F1_M_Bathroom(View view) {
+        Intent intent = new Intent(this, MapsActivity.class);;
+        startActivity(intent);
+    }
+    public void Open_F1_F_Bathroom(View view) {
+        Intent intent = new Intent(this, MapsActivity.class);;
+        startActivity(intent);
+    }
 
 }
