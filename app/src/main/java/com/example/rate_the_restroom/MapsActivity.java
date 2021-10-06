@@ -2,6 +2,7 @@ package com.example.rate_the_restroom;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -45,7 +46,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         LatLng STCBuilding = new LatLng(43.814729, -111.784617);
         STCMarker = mMap.addMarker(new MarkerOptions().position(STCBuilding).title("Science and Technology Center"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CentP, 25));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CentP, 19));
 
     }
 
@@ -54,6 +55,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         if (marker.equals(STCMarker))
         {
+            Intent intent = new Intent(this, Select_Floor.class);
+            startActivity(intent);
             // activate next activity
         }
         return false;
