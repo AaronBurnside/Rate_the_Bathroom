@@ -1,6 +1,12 @@
 package com.example.rate_the_restroom;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.app.ProgressDialog;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -32,6 +38,13 @@ public class Select_Floor extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_select_floor);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+        ImageButton button = (ImageButton) findViewById(R.id.F0male);
+
     }
+    public void Open_F0_M_Bathroom(View view) {
+        Intent intent = new Intent(this, MapsActivity.class);;
+        startActivity(intent);
+    }
+
 
 }
