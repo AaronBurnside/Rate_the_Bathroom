@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -27,8 +28,31 @@ public class STC_F0_comment_feed extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stc_f1_comment_feed);
 
-
+        int comment_number = 0;
+        TextView Comment1 = (TextView) findViewById(R.id.Comment1);
+        TextView Comment2 = (TextView) findViewById(R.id.Comment2);
+        TextView Comment3 = (TextView) findViewById(R.id.Comment3);
+        TextView Comment4 = (TextView) findViewById(R.id.Comment4);
+        TextView Comment5 = (TextView) findViewById(R.id.Comment5);
+        //TODO put each comment through Change_comment Function
+        Change_comment(Comment1, comment_number);
+        comment_number += 1;
+        Change_comment(Comment2, comment_number);
+        comment_number += 1;
+        Change_comment(Comment3, comment_number);
+        comment_number += 1;
+        Change_comment(Comment4, comment_number);
+        comment_number += 1;
+        Change_comment(Comment5, comment_number);
     }
+    public void Change_comment(TextView A_comment, int comment_number){
+        String Fetched_comment = "";
+        //TODO This is where we will request the comments from the server, send comment_number to tell the server which comment is needed from list
+
+        A_comment.setText(Fetched_comment);
+        return;
+    }
+
 
     public void Post_comment(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -58,4 +82,5 @@ public class STC_F0_comment_feed extends AppCompatActivity {
 
         return;
     }
+
 }

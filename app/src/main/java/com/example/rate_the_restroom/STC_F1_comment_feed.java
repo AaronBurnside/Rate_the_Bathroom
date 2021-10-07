@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class STC_F1_comment_feed extends AppCompatActivity {
     private String New_comment = "";
@@ -15,6 +16,14 @@ public class STC_F1_comment_feed extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stc_f1_comment_feed);
+
+        TextView Comment1 = (TextView) findViewById(R.id.Comment1);
+        TextView Comment2 = (TextView) findViewById(R.id.Comment2);
+        TextView Comment3 = (TextView) findViewById(R.id.Comment3);
+        TextView Comment4 = (TextView) findViewById(R.id.Comment4);
+        TextView Comment5 = (TextView) findViewById(R.id.Comment5);
+
+
     }
 
     public void Post_comment(View view){

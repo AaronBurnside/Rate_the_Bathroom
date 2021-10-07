@@ -18,7 +18,7 @@
 
 
         <TextView
-            android:id="@+id/comment5"
+            android:id="@+id/Comment5"
             android:layout_width="390dp"
             android:layout_height="69dp"
             android:isScrollContainer="false"
@@ -27,7 +27,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/comment4" />
+            app:layout_constraintTop_toBottomOf="@+id/Comment4" />
 
         <TextView
             android:id="@+id/Comment1"
@@ -55,7 +55,7 @@
             app:layout_constraintTop_toBottomOf="@+id/Comment1" />
 
         <TextView
-            android:id="@+id/comment4"
+            android:id="@+id/Comment4"
             android:layout_width="381dp"
             android:layout_height="70dp"
             android:isScrollContainer="false"
