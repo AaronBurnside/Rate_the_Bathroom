@@ -11,21 +11,22 @@
         android:id="@+id/constraintLayout"
         android:layout_width="533dp"
         android:layout_height="1265dp"
-        tools:context=".STC_F1_comment_feed"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="16dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".STC_F1_comment_feed">
 
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/comment5"
             android:layout_width="390dp"
             android:layout_height="69dp"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="288dp"
             android:isScrollContainer="false"
-            android:text="First Comment"
+            android:text="Fifth Comment"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.43"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,58 +39,65 @@
             android:isScrollContainer="false"
             android:text="First Comment"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/Comment1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.377"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/Comment2"
+            android:layout_width="390dp"
+            android:layout_height="69dp"
+            android:isScrollContainer="false"
+            android:text="Second Comment"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.377"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Comment1" />
+
+        <TextView
+            android:id="@+id/comment4"
+            android:layout_width="381dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="92dp"
+            android:isScrollContainer="false"
+            android:text="Fourth Comment"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Comment3" />
+
+        <TextView
+            android:id="@+id/Comment3"
+            android:layout_width="390dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginEnd="89dp"
+            android:isScrollContainer="false"
+            android:text="Third Comment"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Comment2"
+            app:layout_constraintVertical_bias="0.0" />
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/AddComment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_marginEnd="150dp"
-            android:layout_marginBottom="420dp"
+            android:layout_marginEnd="92dp"
+            android:layout_marginBottom="430dp"
+            android:onClick="Post_comment"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@android:drawable/ic_dialog_email" />
-
-        <TextView
-            android:id="@+id/Comment2"
-            android:layout_width="390dp"
-            android:layout_height="69dp"
-            android:isScrollContainer="false"
-            android:text="First Comment"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Comment1" />
-
-        <TextView
-            android:id="@+id/Comment1"
-            android:layout_width="390dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="75dp"
-            android:isScrollContainer="false"
-            android:text="First Comment"
-            android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp" />
-
-        <TextView
-            android:id="@+id/Comment2"
-            android:layout_width="390dp"
-            android:layout_height="69dp"
-            android:isScrollContainer="false"
-            android:text="First Comment"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/Comment2"
-            app:layout_constraintVertical_bias="1.0"
-            tools:layout_editor_absoluteX="5dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
