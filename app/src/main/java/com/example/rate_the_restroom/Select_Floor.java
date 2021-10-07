@@ -20,41 +20,29 @@ import com.example.rate_the_restroom.databinding.ActivitySelectFloorBinding;
 
 public class Select_Floor extends AppCompatActivity {
 
-    private ActivitySelectFloorBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_select_floor);
 
-        binding = ActivitySelectFloorBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_select_floor);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
+        ;
         //ImageButton button = (ImageButton) findViewById(R.id.F0male);
 
     }
     public void Open_F0_M_Bathroom(View view) {
-        Intent intent = new Intent(this, MapsActivity.class);;
+        Intent intent = new Intent(this, STC_F0_comment_feed.class);
         startActivity(intent);
     }
     public void Open_F0_F_Bathroom(View view) {
-        Intent intent = new Intent(this, MapsActivity.class);;
+        Intent intent = new Intent(this, STC_F0_comment_feed.class); //TODO seperate male and female bathrooms into seperate activities
         startActivity(intent);
     }
     public void Open_F1_M_Bathroom(View view) {
-        Intent intent = new Intent(this, MapsActivity.class);;
+        Intent intent = new Intent(this, STC_F1_comment_feed.class);
         startActivity(intent);
     }
     public void Open_F1_F_Bathroom(View view) {
-        Intent intent = new Intent(this, MapsActivity.class);;
+        Intent intent = new Intent(this, STC_F1_comment_feed.class);
         startActivity(intent);
     }
 
