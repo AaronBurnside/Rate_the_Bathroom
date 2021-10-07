@@ -17,6 +17,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Rate_The_Restroom">
         <activity
+            android:name=".STC_F1_comment_feed"
+            android:exported="true" />
+        <activity
+            android:name=".STC_F0_comment_feed"
+            android:exported="true"
+            android:label="@string/title_activity_stc_f0_comment_feed"
+            android:theme="@style/Theme.Rate_The_Restroom.NoActionBar" />
+        <activity
             android:name=".Select_Floor"
             android:exported="true"
             android:label="@string/title_activity_select_floor" />

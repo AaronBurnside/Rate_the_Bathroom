@@ -82,7 +82,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             startActivity(intent);
             // activate next activity
         }
-        if (marker.equals(STCMarker))
+        if (marker.equals(SmithMarker))
         {
             Intent intent = new Intent(this, Select_Floor.class); //TODO change to different floor activity
             startActivity(intent);
