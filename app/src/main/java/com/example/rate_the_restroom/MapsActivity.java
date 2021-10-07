@@ -66,7 +66,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng STCBuilding = new LatLng(43.814729, -111.784617);
         STCMarker = mMap.addMarker(new MarkerOptions().position(STCBuilding).title("Science and Technology Center"));
         SmithMarker = mMap.addMarker(new MarkerOptions().position(SmithBuilding).title("Joseph Fielding Smith Building"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CentP, 19));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CentP, 17));
         getLocationPermission();
         getDeviceLocation();
 
