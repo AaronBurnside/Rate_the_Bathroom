@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -34,14 +33,6 @@ import java.util.Date;
 
 public abstract class STC_F0_comment_feed extends AppCompatActivity {
     private A_Comment The_Comment = new A_Comment();
-    URL url;
-    {
-        try {
-            url = new URL("http://yourserver"); //TODO Replace with actual server URL
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,7 +146,7 @@ public abstract class STC_F0_comment_feed extends AppCompatActivity {
         DataOutputStream outputStream = null;
         DataInputStream inputStream = null;
         String pathToOurFile = "src/main/java/com/example/rate_the_restroom/Comment_File";
-        String urlServer = "http://Our_server_Goes_Here";
+        String urlServer = "http://Our_server_Goes_Here"; //TODO Add Server URL Here
         String lineEnd = "\r\n";
         String twoHyphens = "--";
         String boundary =  "*****";
@@ -216,7 +207,7 @@ public abstract class STC_F0_comment_feed extends AppCompatActivity {
         }
         catch (Exception ex)
         {
-            //Exception handling
+            //TODO Add Exception handling
         }
 
 
