@@ -21,7 +21,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -214,7 +213,5 @@ public abstract class STC_F0_comment_feed extends AppCompatActivity {
         return;
     }
 
-    private void writeStream(OutputStream out) {
-    }
 
 }
