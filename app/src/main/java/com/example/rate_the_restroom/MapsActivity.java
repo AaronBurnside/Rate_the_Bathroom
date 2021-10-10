@@ -1,16 +1,12 @@
 package com.example.rate_the_restroom;
 
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentActivity;
-
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
-import android.util.Log;
 
+import androidx.fragment.app.FragmentActivity;
+
+import com.example.rate_the_restroom.databinding.ActivityMapsBinding;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -19,9 +15,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.example.rate_the_restroom.databinding.ActivityMapsBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
 
@@ -62,13 +55,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         mMap.setOnMarkerClickListener(this);
-        // Add a marker in Sydney and move the camera
+
         LatLng STCBuilding = new LatLng(43.814729, -111.784617);
         STCMarker = mMap.addMarker(new MarkerOptions().position(STCBuilding).title("Science and Technology Center"));
         SmithMarker = mMap.addMarker(new MarkerOptions().position(SmithBuilding).title("Joseph Fielding Smith Building"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CentP, 17));
-        getLocationPermission();
-        getDeviceLocation();
+        //getLocationPermission();
+        //getDeviceLocation();
 
 
     }
@@ -91,11 +84,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return false;
     }
 
-    private void getDeviceLocation() {
+   /* private void getDeviceLocation() {
         /*
          * Get the best and most recent location of the device, which may be null in rare
          * cases when a location is not available.
-         */
+         *
         try {
             if (locationPermissionGranted) {
                 Task<Location> locationResult = fusedLocationProviderClient.getLastLocation();
@@ -127,8 +120,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
          * Request location permission, so that we can get the location of the
          * device. The result of the permission request is handled by a callback,
          * onRequestPermissionsResult.
-         */
-        if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
+         *
+       /* if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
                 android.Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             locationPermissionGranted = true;
@@ -136,8 +129,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             ActivityCompat.requestPermissions(this,
                     new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
         }
-    }
-
+    }*/
+/*
     private void updateLocationUI() {
         if (mMap == null) {
             return;
@@ -155,7 +148,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } catch (SecurityException e)  {
             Log.e("Exception: %s", e.getMessage());
         }
-    }
+    }*/
 
 
 }
